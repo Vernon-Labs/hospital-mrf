@@ -30,14 +30,14 @@ func parseCodeTypes(s string) map[string]bool {
 }
 
 var rootCmd = &cobra.Command{
-	Use:   "mrf",
+	Use:   "hospital-mrf",
 	Short: "Convert a hospital MRF file (CSV/JSON) to Parquet",
 	Long: `Convert a single hospital price transparency file (CSV or JSON) to Parquet.
 
 Examples:
-  mrf --file input.csv
-  mrf --file input.json --out output.parquet
-  mrf --file https://example.com/charges.csv`,
+  hospital-mrf --file input.csv
+  hospital-mrf --file input.json --out output.parquet
+  hospital-mrf --file https://example.com/charges.csv`,
 	Run: func(cmd *cobra.Command, args []string) {
 		file, _ := cmd.Flags().GetString("file")
 		out, _ := cmd.Flags().GetString("out")

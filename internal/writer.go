@@ -69,7 +69,7 @@ func NewChargeWriter(filename string) (*ChargeWriter, error) {
 		parquet.Compression(&zstd.Codec{Level: zstd.SpeedDefault}),
 		parquet.PageBufferSize(8*1024),
 		parquet.DataPageStatistics(true),
-		parquet.CreatedBy("mrf", "1.0", ""),
+		parquet.CreatedBy("hospital-mrf", "1.0", ""),
 		parquet.BloomFilters(
 			parquet.SplitBlockFilter(bloomBitsPerValue, "cpt_code"),
 			parquet.SplitBlockFilter(bloomBitsPerValue, "hcpcs_code"),
@@ -193,7 +193,7 @@ func NewItemWriter(filename string) (*ItemWriter, error) {
 		parquet.Compression(&zstd.Codec{Level: zstd.SpeedDefault}),
 		parquet.PageBufferSize(8*1024),
 		parquet.DataPageStatistics(true),
-		parquet.CreatedBy("mrf", "1.0", ""),
+		parquet.CreatedBy("hospital-mrf", "1.0", ""),
 		parquet.BloomFilters(
 			parquet.SplitBlockFilter(bloomBitsPerValue, "cpt_code"),
 			parquet.SplitBlockFilter(bloomBitsPerValue, "hcpcs_code"),
@@ -285,7 +285,7 @@ func NewPayerWriter(filename string) (*PayerWriter, error) {
 		parquet.Compression(&zstd.Codec{Level: zstd.SpeedDefault}),
 		parquet.PageBufferSize(8*1024),
 		parquet.DataPageStatistics(true),
-		parquet.CreatedBy("mrf", "1.0", ""),
+		parquet.CreatedBy("hospital-mrf", "1.0", ""),
 		parquet.BloomFilters(
 			parquet.SplitBlockFilter(bloomBitsPerValue, "cpt_code"),
 			parquet.SplitBlockFilter(bloomBitsPerValue, "hcpcs_code"),
@@ -366,7 +366,7 @@ func NewCodeInfoWriter(filename string) (*CodeInfoWriter, error) {
 		parquet.Compression(&zstd.Codec{Level: zstd.SpeedDefault}),
 		parquet.PageBufferSize(8*1024),
 		parquet.DataPageStatistics(true),
-		parquet.CreatedBy("mrf", "1.0", ""),
+		parquet.CreatedBy("hospital-mrf", "1.0", ""),
 		parquet.BloomFilters(
 			parquet.SplitBlockFilter(bloomBitsPerValue, "code_type"),
 			parquet.SplitBlockFilter(bloomBitsPerValue, "code_value"),

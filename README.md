@@ -1,4 +1,4 @@
-# mrf
+# hospital-mrf
 
 A command-line tool that converts hospital price transparency files (CSV or JSON) into optimized Apache Parquet files.
 
@@ -29,7 +29,7 @@ V3 adds several fields over V2: allowed-amount statistics (median, 10th/90th per
 ## Usage
 
 ```
-mrf --file <input> [flags]
+hospital-mrf --file <input> [flags]
 ```
 
 ### Flags
@@ -49,13 +49,13 @@ mrf --file <input> [flags]
 
 ```bash
 # Convert a local CSV
-mrf --file charges.csv
+hospital-mrf --file charges.csv
 
 # Convert a remote JSON file with custom output path
-mrf --file https://hospital.example.com/charges.json --out hospital.parquet
+hospital-mrf --file https://hospital.example.com/charges.json --out hospital.parquet
 
 # Only include CPT and HCPCS codes
-mrf --file charges.csv --code-types CPT,HCPCS
+hospital-mrf --file charges.csv --code-types CPT,HCPCS
 ```
 
 ### Output

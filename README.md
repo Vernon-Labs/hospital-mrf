@@ -26,6 +26,8 @@ MRF supports **V2** and **V3** of the CMS Hospital Price Transparency schema. V1
 
 V3 adds several fields over V2: allowed-amount statistics (median, 10th/90th percentile, count), `billing_class` at both item and charge levels, and two new code types (CMG, MS-LTC-DRG). Version is auto-detected from the file.
 
+For the full schema specification and implementation guide, see the [CMS Hospital Price Transparency repository](https://github.com/CMSgov/hospital-price-transparency).
+
 ## Usage
 
 ```

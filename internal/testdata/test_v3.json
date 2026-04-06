@@ -1,0 +1,116 @@
+{
+  "hospital_name": "Metro Health Center",
+  "last_updated_on": "2025-01-15",
+  "version": "3.0.0",
+  "location_name": ["Metro Health Center", "789 Elm St, Manhattan, NY 10010"],
+  "hospital_address": ["789 Elm St", "Manhattan, NY 10010"],
+  "license_information": {
+    "license_number": "MHC-5544",
+    "state": "NY"
+  },
+  "attestation": {
+    "attestation": "To the best of its knowledge...",
+    "confirm_attestation": true,
+    "attester_name": "Dr. Jane Smith"
+  },
+  "financial_aid_policy": "https://metrohealthcenter.org/financial-aid",
+  "general_contract_provisions": [
+    {
+      "payer_name": "Cigna",
+      "plan_name": "Cigna Open Access",
+      "provisions": "Stop-loss at $500,000 per case"
+    }
+  ],
+  "type_2_npi": ["1234567890"],
+  "standard_charge_information": [
+    {
+      "description": "MRI BRAIN WITHOUT CONTRAST",
+      "code_information": [
+        {"code": "70551", "type": "CPT"}
+      ],
+      "billing_class": "facility",
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "gross_charge": 3500.00,
+          "discounted_cash": 1750.00,
+          "minimum": 1200.00,
+          "maximum": 4500.00,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Cigna Open Access",
+              "methodology": "case_rate",
+              "standard_charge_dollar": 2200.00,
+              "median_amount": 2100.00,
+              "10th_percentile": 1500.00,
+              "90th_percentile": 3800.00,
+              "count": "245"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "EMERGENCY ROOM VISIT LEVEL 3",
+      "code_information": [
+        {"code": "99283", "type": "CPT"},
+        {"code": "0450", "type": "RC"}
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "gross_charge": 950.00,
+          "discounted_cash": 475.00,
+          "billing_class": "both"
+        }
+      ]
+    },
+    {
+      "description": "REHAB THERAPY SESSION",
+      "code_information": [
+        {"code": "0023", "type": "CMG"}
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "gross_charge": 800.00,
+          "discounted_cash": 400.00,
+          "minimum": 350.00,
+          "maximum": 1200.00,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Aetna PPO",
+              "methodology": "percent_of_total_billed_charges",
+              "standard_charge_percentage": 65.0,
+              "standard_charge_algorithm": "65% of billed charges",
+              "median_amount": 520.00,
+              "10th_percentile": 380.00,
+              "90th_percentile": 750.00,
+              "count": "1 through 10",
+              "additional_payer_notes": "Subject to stop-loss"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "LONG TERM CARE STAY",
+      "code_information": [
+        {"code": "189", "type": "MS-LTC-DRG"}
+      ],
+      "drug_information": {
+        "unit": 100.0,
+        "type": "UN"
+      },
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "gross_charge": 25000.00,
+          "discounted_cash": 12500.00
+        }
+      ]
+    }
+  ]
+}

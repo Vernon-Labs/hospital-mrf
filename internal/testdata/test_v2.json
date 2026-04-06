@@ -1,0 +1,94 @@
+{
+  "hospital_name": "Test Community Hospital",
+  "last_updated_on": "2024-06-01",
+  "version": "2.0.0",
+  "hospital_location": ["Test Community Hospital", "456 Oak Ave, Brooklyn, NY 11201"],
+  "hospital_address": ["456 Oak Ave", "Brooklyn, NY 11201"],
+  "license_information": {
+    "license_number": "H-99887",
+    "state": "NY"
+  },
+  "affirmation": {
+    "confirm_affirmation": true
+  },
+  "standard_charge_information": [
+    {
+      "description": "X-RAY CHEST 2 VIEWS",
+      "code_information": [
+        {"code": "71046", "type": "CPT"},
+        {"code": "0324", "type": "RC"}
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "gross_charges": "1,250.00",
+          "discounted_cash": 625.00,
+          "minimum": 400.00,
+          "maximum": 1800.00,
+          "modifier_code": ["26", "TC"],
+          "additional_generic_notes": "Includes interpretation",
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Aetna PPO",
+              "methodology": "fee_schedule",
+              "standard_charge_dollar": 800.00,
+              "additional_payer_notes": "Network rate"
+            },
+            {
+              "payer_name": "Blue Cross",
+              "plan_name": "BC Standard",
+              "methodology": "percent_of_total_billed_charges",
+              "standard_charge_percentage": 75.5,
+              "estimated_amount": 943.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "IBUPROFEN 200MG TABLET",
+      "code_information": [
+        {"code": "00573-0150-20", "type": "NDC"},
+        {"code": "J3490", "type": "HCPCS"}
+      ],
+      "drug_information": {
+        "unit": 200.0,
+        "type": "ME"
+      },
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "gross_charges": 12.50,
+          "discounted_cash": 6.25,
+          "minimum": 3.00,
+          "maximum": 18.00,
+          "payers_information": [
+            {
+              "payer_name": "UnitedHealthcare",
+              "plan_name": "UHC Choice Plus",
+              "methodology": "per_diem",
+              "standard_charge_dollar": 8.00,
+              "standard_charge_algorithm": "per diem rate table v3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "KNEE REPLACEMENT",
+      "code_information": [
+        {"code": "470", "type": "MS-DRG"}
+      ],
+      "standard_charges": [
+        {
+          "setting": "inpatient",
+          "gross_charges": "45,000.00",
+          "discounted_cash": 22500.00,
+          "minimum": 20000.00,
+          "maximum": 65000.00
+        }
+      ]
+    }
+  ]
+}

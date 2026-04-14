@@ -89,3 +89,7 @@ Both modes also write a `meta.json` (hospital metadata) and append to the JSONL 
 **Row sorting by CPT code.** Rows are sorted before writing so that per-row-group min/max statistics are tight for the most common query pattern (filtering by procedure code).
 
 **Implicit compression wins.** Hospital metadata repeats per row and dictionary+RLE compresses to near-zero. String enums (`setting`, `methodology`, `billing_class`) dictionary-encode automatically, letting engines resolve equality predicates as integer comparisons.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
